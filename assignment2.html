@@ -1,0 +1,51 @@
+<html>
+    <style>
+        .container{
+            
+            height:100%;
+            width:80%;
+            margin-left:10%;
+            margin-right:10%;
+            
+        }
+        .a{
+            height:40%;
+            width:30%;
+            margin-left:1%;
+            margin-top:1%;
+            margin-right:1%;
+            margin-bottom:1%;
+            border:solid 1px black;
+            float:left;
+        }
+
+    </style>
+    <body>
+       <div class='container'>
+
+       </div>
+    </body>
+    <script>
+        var x=0;
+         function loadimages(){
+             let i=0;
+             while(i<25){
+                const a=document.createElement('div');
+                a.setAttribute('class','a');
+                a.innerHTML=x;
+                x++;
+                var b=document.querySelector('.container');
+                b.append(a);
+                i++;
+             }
+            }
+            loadimages();
+            
+            
+
+            window.addEventListener('scroll',()=>{
+                if(window.scrollY+window.innerHeight>=document.documentElement.scrollHeight){
+                   loadimages(); }
+                })
+    </script>
+</html>
